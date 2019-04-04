@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title style="text-align:center;">Lab1</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body style="background-color:white;text-align:center;">
+<br>Enter lyrics here...<br>
+{% from "_formhelpers.html" import render_field %}
+
+<form action="/api/lyrics" method="POST">
+	<dl>{{ render_field(form.lyrics, cols='30', rows='10') }} </dl>
+	<div><input type="submit" value="submit"></div>
+</form>
+
+<p> {{y}}</p>	
+<p> {{probability}}</p>
+<br>
+
+</body>
+</html>
